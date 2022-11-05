@@ -1,4 +1,4 @@
-package com.wisdom.area.configurer.mybatis;
+package com.ysmjjsy.verification.configuration;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.autoconfigure.ConfigurationCustomizer;
@@ -27,13 +27,13 @@ public class MybatisPlusConfig {
         /* 乐观锁 */
         interceptor.addInnerInterceptor(new OptimisticLockerInnerInterceptor());
         /* 分页插件 */
-        interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.ORACLE));
+        interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));
         return interceptor;
     }
 
-    @Bean
-    public ConfigurationCustomizer configurationCustomizer() {
-        return configuration -> configuration.setUseDeprecatedExecutor(false);
-    }
+//    @Bean
+//    public ConfigurationCustomizer configurationCustomizer() {
+//        return configuration -> configuration.setUseDeprecatedExecutor(false);
+//    }
 
 }

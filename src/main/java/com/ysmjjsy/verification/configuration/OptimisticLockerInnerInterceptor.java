@@ -1,4 +1,4 @@
-package com.wisdom.area.configurer.mybatis;
+package com.ysmjjsy.verification.configuration;
 
 import com.baomidou.mybatisplus.core.conditions.AbstractWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;

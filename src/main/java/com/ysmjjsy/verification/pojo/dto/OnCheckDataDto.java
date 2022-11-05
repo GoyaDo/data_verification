@@ -9,16 +9,18 @@ import java.util.List;
  * @since 2022-11-05
  */
 @Data
-public class OnCheckData {
+public class OnCheckDataDto {
 
     /**
      * 规则值
      */
     private String ruleData;
 
+    private String ruleFieldColumn;
+
     /**
      * 限制值
      */
-    private List<String> limitData;
+    private List<FieldDataDto> limitDatas;
 
 }

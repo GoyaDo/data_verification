@@ -1,7 +1,16 @@
-package com.ysmjjsy.verification.pojo.vo;/**
- *
+package com.ysmjjsy.verification.pojo.vo;
+
+import com.ysmjjsy.verification.pojo.entity.VerificationRule;
+import lombok.Data;
+
+/**
  * @author cj
  * @since 2022-11-05
  */
-    public class VerificationTableVo {
+@Data
+public class VerificationTableVo {
+
+    private VerificationRule verificationRule;
+
+
 }

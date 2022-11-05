@@ -7,7 +7,7 @@ import lombok.Data;
  * @since 2022-11-05
  */
 @Data
-public class Person {
+public class PersonDto {
 
     private String height;
 
@@ -18,4 +18,8 @@ public class Person {
     private String advice;
 
     private String bmi;
+
+    private String userName;
+
+    private String email;
 }

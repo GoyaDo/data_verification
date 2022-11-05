@@ -1,7 +1,15 @@
-package com.ysmjjsy.verification.pojo.dto;/**
- *
+package com.ysmjjsy.verification.pojo.dto;
+
+import lombok.Data;
+
+/**
  * @author cj
  * @since 2022-11-05
  */
-    public class FieldDataDto {
+@Data
+public class FieldDataDto {
+
+    private String fieldColumn;
+
+    private String fieldColumnValue;
 }
