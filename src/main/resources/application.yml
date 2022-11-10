@@ -86,3 +86,9 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   #    关闭sql打印
   #    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+
+
+rocketmq:
+  name-server: localhost:9876
+  producer:
+    group: my-group
