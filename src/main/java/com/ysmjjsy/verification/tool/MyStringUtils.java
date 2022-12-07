@@ -22,9 +22,9 @@ public class MyStringUtils {
 
     public static boolean compareStringContains(String v1, String v2) {
         if (StringUtils.isNoneEmpty(v1, v2)) {
-            List<String> list1 = Arrays.asList(StringUtils.split(v1, ","));
-            List<String> list2 = Arrays.asList(StringUtils.split(v2, ","));
-            return list1.stream().anyMatch(list2::contains) || list2.stream().anyMatch(list1::contains);
+            List<String> s1 = Arrays.asList(StringUtils.split(v1, ","));
+            List<String> s2 = Arrays.asList(StringUtils.split(v2, ","));
+            return s1.stream().anyMatch(s2::contains) || s2.stream().anyMatch(s1::contains);
         }
         return Boolean.FALSE;
     }

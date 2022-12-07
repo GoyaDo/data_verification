@@ -1,4 +1,11 @@
+
+
 spring:
+  batchDatasource:
+    username: root
+    password: goya
+    url: jdbc:mysql://localhost:3306/batch_job?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
   datasource:
     druid:
       # 下面为连接池的补充设置，应用到上面所有数据源中
@@ -58,6 +65,10 @@ spring:
     multipart:
       max-file-size: 20MB
       max-request-size: 20MB
+  batch:
+    job:
+      enabled: false
+
 #mybatis config
 mybatis:
   mapper-locations: classpath*:mapping/*Mapper.xml
@@ -92,3 +103,17 @@ rocketmq:
   name-server: localhost:9876
   producer:
     group: my-group
+
+elasticjob:
+  regCenter:
+    serverLists: localhost:2181
+    namespace: ysmjjsy
+  jobs:
+    testUserJob:
+      elasticJobClass: com.ysmjjsy.verification.batch.jobs.MigrateUserJob
+      cron: 0 * * * * ?
+      shardingTotalCount: 2
+      shardingItemParameters: 0=0@5,1=5@20
+
+server:
+  port: 8877

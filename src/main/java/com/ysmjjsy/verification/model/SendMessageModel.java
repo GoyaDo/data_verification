@@ -17,7 +17,7 @@ public class SendMessageModel {
     private final RocketMQTemplate rocketMQTemplate;
 
     public boolean sendMessage(String message){
-        System.out.println("111");
+
         return Boolean.TRUE;
     }
 }
